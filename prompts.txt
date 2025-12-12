@@ -1,1 +1,70 @@
 
+Side A: The Encryption Workflow (The Sender)
+Goal: Turn your text file into a hidden image.
+
+Prepare the "Prompt"
+
+You create a file named prompts.txt.
+
+Content: This contains your sensitive data (e.g., "The launch code is 8841").
+
+Select Cover Image
+
+You choose a normal, harmless image (e.g., landscape.jpg).
+
+This is called the "Cover Image."
+
+Lock it (AES Encryption)
+
+You enter a Password in the app.
+
+The app takes the text from prompts.txt, mixes it with a "Salt" (random data), and encrypts it using the AES-256 standard.
+
+Result: The text becomes unreadable gibberish (Ciphertext).
+
+Hide it (LSB Encoding)
+
+The app takes that gibberish and breaks it down into 0s and 1s (binary).
+
+It modifies the Least Significant Bit (the smallest detail) of the image pixels to match your data.
+
+Visual: The image looks exactly the same to the human eye.
+
+Output
+
+The app generates a new file: secure.png.
+
+You send this image to the receiver via email, WhatsApp, or Slack.
+
+Side B: The Decryption Workflow (The Receiver)
+Goal: Extract the text back out of the image.
+
+Receive the File
+
+The receiver downloads secure.png.
+
+Upload to App
+
+They open Project KAVACH and go to Tab 2 (Decrypt).
+
+They upload secure.png.
+
+Unlock (Authentication)
+
+They must enter the exact Password you used in Side A.
+
+Note: If the password is wrong, the math won't work, and they get nothing.
+
+Extract (LSB Decoding)
+
+The app scans the pixels of the image.
+
+It pulls out the hidden 0s and 1s from the pixel data.
+
+It reconstructs the "gibberish" (Ciphertext).
+
+Decrypt (AES Decryption)
+
+The app uses the password to decrypt the gibberish.
+
+Final Output: The original text from prompts.txt appears on the screen: "The launch code is 8841".
