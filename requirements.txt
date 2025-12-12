@@ -1,0 +1,38 @@
+Step 1: Create the File
+Open your text editor (Notepad, VS Code, Sublime Text, etc.).
+
+Copy the exact text below.
+
+Paste it into the new file.
+
+Plaintext
+
+streamlit
+cryptography
+Pillow
+Save the file inside your project folder (where your app.py is located) with the exact name: requirements.txt
+
+Step 2: How to Use It
+Once the file is saved, open your Command Prompt (Windows) or Terminal (Mac/Linux), navigate to your project folder, and run this command:
+
+Bash
+
+pip install -r requirements.txt
+Why do you need this?
+For GitHub: It lets other people run your code easily.
+
+For Deployment: If you host this app online (like on Streamlit Cloud), the server looks for this file to know what to install.
+
+Alternative Method (Command Line)
+If you are already in your terminal inside the project folder, you can create it instantly by running this single command:
+
+Windows (Command Prompt):
+
+DOS
+
+echo streamlit > requirements.txt & echo cryptography >> requirements.txt & echo Pillow >> requirements.txt
+Mac/Linux/Git Bash:
+
+Bash
+
+echo -e "streamlit\ncryptography\nPillow" > requirements.txt
