@@ -1,3 +1,13 @@
+streamlit
+cryptography
+Pillow
+
+
+
+
+
+workflow:
+
 Step 1: Create the File
 Open your text editor (Notepad, VS Code, Sublime Text, etc.).
 
